@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <math.h>
 
-//#define maxsize 10000
 #define ll long long int
 
 ll maxsize=10000;
@@ -81,21 +80,7 @@ void printque(pque *pq){
 }
 
 
-/*void heapify(ll *ar,ll i){
-	ll min=i;
-	if(2*i+1<heapsize){
-	  if(ar[2*i+1]<ar[i]){
-	    min=2*i+1;}
-	  if(2*i+2<heapsize){
-	     if(ar[2*i+2]<ar[min])
-	       min=2*i+2;
-	    }
-	  if(min!=i){
-	     swap(&ar[i],&ar[min]);
-	     heapify(ar,min);
-	  }
-	}
-}*/
+
 
 void heapify(pque *pq,ll i){
 	ll min=i;
@@ -173,8 +158,6 @@ void decrease_priority(pque *pq, ll elem, ll newpr){
 	   return;
 	}
 	pq->que[pos].pt=newpr;
-                                                             //	while(pos>1 && pq->que[pos/2].pt>pq->que[pos].pt){
-    
 
   
     for(;pos>1 && pq->que[pos/2].pt>pq->que[pos].pt;){                                                     
